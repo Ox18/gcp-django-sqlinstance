@@ -10,6 +10,7 @@ def members(request):
     SQL_TABLE = env("SQL_TABLE", default=None)
     SQL_USER = env("SQL_USER", default=None)
     SQL_PASSWORD = env("SQL_PASSWORD", default=None)
+    K_REVISION = env("K_REVISION", default=None)
 
     return JsonResponse({
         "secrets": {
@@ -18,5 +19,6 @@ def members(request):
             "SQL_TABLE": SQL_TABLE,
             "SQL_USER": SQL_USER,
             "SQL_PASSWORD": SQL_PASSWORD,
+            "K_REVISION": K_REVISION,
         }
     })
