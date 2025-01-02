@@ -32,7 +32,7 @@ SECRET_KEY = 'django-insecure-sjnk1wbxyce)6=f3pfqm#)4j$^kr_)mq6ix!0^dm)lc=^jg9jl
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-CLOUDRUN_SERVICE_URL = env("CLOUDRUN_SERVICE_URL", default=None)
+CLOUDRUN_SERVICE_URL = 'crunappdjango-836631504784.us-central1.run.app'
 if CLOUDRUN_SERVICE_URL:
     ALLOWED_HOSTS = [urlparse(CLOUDRUN_SERVICE_URL).netloc]
     CSRF_TRUSTED_ORIGINS = [CLOUDRUN_SERVICE_URL]
