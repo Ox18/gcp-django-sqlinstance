@@ -51,7 +51,7 @@ jobs:
           gcloud run deploy $APP_NAME \
           --region $REGION \
           --image $REGION-docker.pkg.dev/$PROJECT_ID/$REGISTRY_NAME/$APP_NAME:$GITHUB_SHA \
-          --add-cloudsql-instances $PROJECT_ID:$PROJECT_ID:$SQL_INSTANCE_NAME \
+          --add-cloudsql-instances $PROJECT_ID:$REGION:$SQL_INSTANCE_NAME \
           --platform "managed" \
           --service-account $SERVICE_ACCOUNT_EMAIL \
           --port 8080 \
